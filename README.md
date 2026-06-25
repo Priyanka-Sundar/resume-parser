@@ -1,4 +1,4 @@
-# Resume Parser 
+# Resume Parser - visit https://resume-parser-mocha.vercel.app/
 
 A sleek, production-ready **Resume Parser** web application built with **React + Vite + Tailwind CSS + Framer Motion** on the frontend and **Node.js + Express** on the backend. It extracts structured candidate data (Name, Email, Phone, Skills, Experience, Education) from PDF and DOCX resumes using a custom regex-and-keyword-based "AI" parsing engine.
 
