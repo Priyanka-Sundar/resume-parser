@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Sparkles, AlertTriangle, RotateCcw } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 import Header from "./components/Header.jsx";
 import FileUpload from "./components/FileUpload.jsx";
@@ -182,6 +183,9 @@ export default function App() {
           <p className="mt-1">Resume Parser · {new Date().getFullYear()}</p>
         </footer>
       </div>
+
+      {/* Vercel Analytics - placed at the end of the component */}
+      <Analytics />
     </div>
   );
 }
