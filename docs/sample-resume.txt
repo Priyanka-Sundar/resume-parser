@@ -1,0 +1,32 @@
+Sarah Johnson
+sarah.johnson@email.com | +1 (415) 555-0192 | linkedin.com/in/sarahjohnson | github.com/sarahj
+
+PROFESSIONAL SUMMARY
+Senior full-stack engineer with 7+ years of experience building scalable web applications.
+Passionate about clean architecture, performance optimization, and mentoring junior developers.
+Shipped products used by millions of users across fintech, e-commerce, and SaaS domains.
+
+WORK EXPERIENCE
+Senior Software Engineer | Stripe | Jan 2021 - Present
+- Led the migration of the payments dashboard from a legacy Angular codebase to React + TypeScript, improving page load time by 40%.
+- Designed and implemented a real-time fraud detection pipeline using Node.js, Kafka, and Redis.
+- Mentored a team of 5 junior engineers; established code review standards that reduced production incidents by 30%.
+
+Full Stack Developer | Airbnb | Jun 2018 - Dec 2020
+- Built a React Native mobile booking flow that increased conversion by 18%.
+- Developed REST and GraphQL APIs in Node.js and Express serving 2M+ requests per day.
+- Containerized services with Docker and orchestrated deployments on Kubernetes.
+
+Software Engineer | Google | Aug 2016 - May 2018
+- Worked on the Google Cloud Console frontend using React, Redux, and Webpack.
+- Contributed to internal tooling that automated infrastructure provisioning with Terraform and Ansible.
+
+EDUCATION
+B.Tech in Computer Science | Indian Institute of Technology, Delhi | 2012 - 2016
+- GPA: 8.7/10. Thesis on distributed consensus algorithms.
+- President of the Coding Club; organized three national hackathons.
+
+SKILLS
+JavaScript, TypeScript, Python, Java, Go, SQL, React, Redux, Next.js, Vue.js, Node.js, Express,
+GraphQL, REST, Microservices, PostgreSQL, MongoDB, Redis, Elasticsearch, AWS, Docker, Kubernetes,
+Terraform, Jenkins, Git, CI/CD, Machine Learning, TensorFlow, Pandas, Agile, Scrum

@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------------------- */
+/*  Base                                                                       */
+/* -------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-ink-950 text-ink-100 font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(167, 139, 250, 0.12), transparent 45%),
+      radial-gradient(circle at 85% 20%, rgba(34, 211, 238, 0.10), transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(251, 113, 133, 0.08), transparent 50%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4f4f73, #3a3a59);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #6b6b92, #4f4f73);
+    background-clip: content-box;
+  }
+
+  ::selection {
+    background: rgba(167, 139, 250, 0.35);
+    color: #fff;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Components                                                                 */
+/* -------------------------------------------------------------------------- */
+@layer components {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08];
+  }
+
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.12];
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #c4b5fd 0%, #a78bfa 35%, #22d3ee 100%);
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(120deg, #fb7185 0%, #fbbf24 50%, #34d399 100%);
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2
+           px-7 py-3.5 rounded-2xl font-semibold text-ink-950
+           bg-gradient-to-r from-accent-glow via-accent to-electric
+           shadow-glow transition-all duration-300
+           hover:shadow-[0_0_60px_-5px_rgba(167,139,250,0.85)]
+           active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium
+           border border-white/10 bg-white/5 text-ink-100;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Utilities                                                                  */
+/* -------------------------------------------------------------------------- */
+@layer utilities {
+  .perspective {
+    perspective: 1200px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Animated gradient border */
+  .gradient-border {
+    position: relative;
+    isolation: isolate;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.6), rgba(34, 211, 238, 0.4), rgba(251, 113, 133, 0.4));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Shimmer used inside loading skeletons */
+  .shimmer-bg {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.09) 37%, rgba(255,255,255,0.04) 63%);
+    background-size: 1000px 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Reduce motion preference                                                   */
+/* -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
