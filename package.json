@@ -1,8 +1,11 @@
-{
+﻿{
   "name": "resume-parser-vercel",
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "vercel-build": "cd client && npm install && npm run build"
+  },
   "dependencies": {
     "mammoth": "^1.8.0",
     "multer": "^2.0.0",
